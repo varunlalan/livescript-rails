@@ -1,4 +1,6 @@
-module Coffee
+require 'livescript'
+
+module LiveScript
   module Rails
     class TemplateHandler
       def self.erb_handler
@@ -7,12 +9,12 @@ module Coffee
 
       def self.call(template)
         compiled_source = erb_handler.call(template)
-        "CoffeeScript.compile(begin;#{compiled_source};end)"
+        "LiveScript.compile(begin;#{compiled_source};end)"
       end
     end
   end
 end
 
 ActiveSupport.on_load(:action_view) do
-  ActionView::Template.register_template_handler :coffee, Coffee::Rails::TemplateHandler
+  ActionView::Template.register_template_handler :ls, LiveScript::Rails::TemplateHandler
 end

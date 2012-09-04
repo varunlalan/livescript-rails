@@ -1,9 +1,9 @@
 require 'rails/engine'
 
-module Coffee
+module LiveScript
   module Rails
     class Engine < ::Rails::Engine
-      config.app_generators.javascript_engine :coffee
+      config.app_generators.javascript_engine :ls
     end
   end
 end
