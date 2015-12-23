@@ -4,9 +4,14 @@ module LiveScript
   module Rails
     class Engine < ::Rails::Engine
       config.app_generators.javascript_engine :ls
-      initializer :register_livescript do |app|
-        app.assets.register_engine '.ls', TiltTemplate
-        app.assets.register_engine '.livescript', TiltTemplate
+
+      config.before_initialize do |app|
+        if app.config.assets.enabled
+          require 'livescript/rails/template_handler'
+          require 'sprockets'
+          Sprockets.register_engine '.ls', LiveScript::TiltTemplate
+          Sprockets.register_engine '.livescript', LiveScript::TiltTemplate
+        end
       end
     end
   end
