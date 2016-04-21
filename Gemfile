@@ -1,11 +1,4 @@
-source "http://rubygems.org"
+source 'https://rubygems.org'
 
-# Specify your gem's dependencies in coffee-rails.gemspec
+# Specify your gem's dependencies in gemspec file
 gemspec
-
-#gem "rails", :git => "git://github.com/rails/rails"
-#gem 'activerecord-deprecated_finders', :git => 'git://github.com/rails/activerecord-deprecated_finders'
-
-
-# To use debugger
-# gem 'debugger'

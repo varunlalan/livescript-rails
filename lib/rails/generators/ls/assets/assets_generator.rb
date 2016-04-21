@@ -1,12 +1,12 @@
-require "rails/generators/named_base"
+require 'rails/generators/named_base'
 
 module Ls
   module Generators
     class AssetsGenerator < ::Rails::Generators::NamedBase
-      source_root File.expand_path("../templates", __FILE__)
+      source_root File.expand_path('../templates', __FILE__)
 
       def copy_livescript
-        template "javascript.js.ls", File.join('app/assets/javascripts', class_path, "#{file_name}.js.ls")
+        template 'javascript.ls', File.join('app/assets/javascripts', class_path, "#{file_name}.ls")
       end
     end
   end
