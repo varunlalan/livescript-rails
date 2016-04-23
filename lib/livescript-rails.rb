@@ -1,3 +1,4 @@
+require 'livescript'
 require 'livescript/rails/version'
-require 'livescript/rails/template_handler'
-require 'livescript/rails/engine'
+require 'livescript/rails/processor'
+require 'livescript/rails/railtie'
