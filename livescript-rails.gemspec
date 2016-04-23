@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'execjs', '~> 2.0'
   s.add_runtime_dependency 'livescript', '~> 2.3'
-  s.add_runtime_dependency 'sprockets', '>= 3.0', '<= 5.0'
+  s.add_runtime_dependency 'sprockets', '>= 3.0', '< 5.0'
 
   s.add_development_dependency 'bundler', '~> 1.11'
   s.add_development_dependency 'rake', '~> 11.1'
