@@ -1,8 +1,8 @@
-require 'sprockets'
+require 'rails/engine'
 
 module LiveScript
   module Rails
-    class Railtie < ::Rails::Railtie
+    class Engine < ::Rails::Engine
       config.app_generators.javascript_engine :ls
 
       initializer :register_livescript do |app|
